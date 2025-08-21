@@ -4,194 +4,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=amiko:400,600,700" rel="stylesheet" />
     <title>Homepage</title>
 </head>
 
 <body>
-    <header class="homepage">
-        <h1 class="homepage-title">Homepage</h1>
-    </header>
+    <div class="wrapper">
+        <header class="homepage">
+            <h1>Homepage</h1>
+        </header>
 
-    <main class="main-section">
-        <section class="about-me">
-            <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, nam recusandae eum nobis dolores ex
-                sint libero voluptates, cupiditate aliquid iste alias enim aut accusantium veniam similique hic illum
-                atque.</p>
-            <ul class="socials-icon">
-
-                <li class="socials-icon-item">
-                    <img class="github-icon"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                        width="30" height="30" />
+        <aside>
+            <ul>
+                <li class="homepage-link">
+                    <a href="#">Homepage</a>
                 </li>
-
-                <li class="socials-icon-item">
-                    <img class="linkedin-icon"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
-                        width="30" height="30" />
-
+                <li class="mywork-link">
+                    <a href="#">My Work</a>
                 </li>
-
-                <li class="socials-icon-item">
-                    <img class="twitter-icon"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
-                        width="30" height="30" />
+                <li class="blog-link">
+                    <a href="#">Blog</a>
                 </li>
             </ul>
-        </section>
+        </aside>
 
-        <section class="mywork-section">
-            <div class="project">
+        <main class="main-section">
 
-                <div class="project-item">
-                    <div class="project-title">
-                        <h3>Project Name</h3>
-                        <ul class="mini-icons">
-                            <li class="mini-icons-item">
-                                <img class="github-icon"
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                                    width="30" height="30" />
-                            </li>
+            <section class="aboutme-section">
+                <h2>About me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, nam recusandae eum nobis
+                    dolores ex
+                    sint libero voluptates, cupiditate aliquid iste alias enim aut accusantium veniam similique hic
+                    illum
+                    atque.</p>
 
-                            <li class="mini-icons-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-                                    <title>open-in-new</title>
-                                    <path
-                                        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                </svg>
-                            </li>
-                        </ul>
+                <ul class="socials-icon">
+
+                    <li class="socials-icon-item">
+                        <a href="#"><img class="github-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                width="25" height="25" /></a>
+                    </li>
+
+                    <li class="socials-icon-item">
+                        <a href="#"><img class="linkedin-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
+                                width="25" height="25" /></a>
+                    </li>
+
+                    <li class="socials-icon-item">
+                        <a href="#"><img class="twitter-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
+                                width="25" height="25" /></a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mywork-section">
+                <h2>My work</h2>
+                <div class="project">
+
+                    <div class="project-item">
+                        <div class="project-title">
+                            <h3>Project Name</h3>
+                            <ul class="mini-icons">
+                                <li class="mini-icons-item">
+                                    <a href="#"><img class="github-icon"
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                            width="25" height="25" /></a>
+                                </li>
+
+                                <li class="mini-icons-item">
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
+                                            height="25">
+                                            <title>open-in-new</title>
+                                            <path
+                                                d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+
+                                        </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="project-description">Short description of the project. Just a couple sentences will
+                            do.
+                        </p>
                     </div>
-                    <p class="project-description">Short description of the project. Just a couple sentences will do.
+
+                    <div class="project-item">
+                        <div class="project-title">
+                            <h3>Project Name</h3>
+                            <ul class="mini-icons">
+                                <li class="mini-icons-item">
+                                    <a href=""><img class="github-icon"
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                            width="25" height="25" /></a>
+                                </li>
+
+                                <li class="mini-icons-item">
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
+                                            height="25">
+                                            <title>open-in-new</title>
+                                            <path
+                                                d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                                    </a>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="project-description">Short description of the project. Just a couple sentences will
+                            do.
+                        </p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">
+                            <h3>Project Name</h3>
+                            <ul class="mini-icons">
+                                <li class="mini-icons-item">
+                                    <a href=""><img class="github-icon"
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                            width="25" height="25" /></a>
+                                </li>
+
+                                <li class="mini-icons-item">
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
+                                            height="25">
+                                            <title>open-in-new</title>
+                                            <path
+                                                d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                                        </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="project-description">Short description of the project. Just a couple sentences will
+                            do.
+                        </p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">
+                            <h3>Project Name</h3>
+                            <ul class="mini-icons">
+                                <li class="mini-icons-item">
+                                    <a href="#"></a><img class="github-icon"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                        width="25" height="25" /></a>
+                                </li>
+
+                                <li class="mini-icons-item">
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
+                                            height="25">
+                                            <title>open-in-new</title>
+                                            <path
+                                                d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                                        </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="project-description">Short description of the project. Just a couple sentences will
+                            do.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="contactme-section">
+                <h2>Contact Me</h2>
+                <div class="contact-note">
+                    <p>
+                        Please get in touch if you think our work could be mutually beneficial!
                     </p>
                 </div>
 
-                <div class="project-item">
-                    <div class="project-title">
-                        <h3>Project Name</h3>
-                        <ul class="mini-icons">
-                            <li class="mini-icons-item">
-                                <img class="github-icon"
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                                    width="30" height="30" />
-                            </li>
-
-                            <li class="mini-icons-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-                                    <title>open-in-new</title>
-                                    <path
-                                        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="project-description">Short description of the project. Just a couple sentences will do.
+                <div class="address">
+                    <p>
+                        1234 Random Road Random Town, California 12345
                     </p>
                 </div>
 
-                <div class="project-item">
-                    <div class="project-title">
-                        <h3>Project Name</h3>
-                        <ul class="mini-icons">
-                            <li class="mini-icons-item">
-                                <img class="github-icon"
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                                    width="30" height="30" />
-                            </li>
-
-                            <li class="mini-icons-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-                                    <title>open-in-new</title>
-                                    <path
-                                        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="project-description">Short description of the project. Just a couple sentences will do.
-                    </p>
+                <div class="phone-number">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                        <title>phone</title>
+                        <path
+                            d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                    </svg>
+                    <p>555-555-5555</p>
                 </div>
 
-                <div class="project-item">
-                    <div class="project-title">
-                        <h3>Project Name</h3>
-                        <ul class="mini-icons">
-                            <li class="mini-icons-item">
-                                <img class="github-icon"
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                                    width="30" height="30" />
-                            </li>
-
-                            <li class="mini-icons-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-                                    <title>open-in-new</title>
-                                    <path
-                                        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="project-description">Short description of the project. Just a couple sentences will do.
-                    </p>
+                <div class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                        <title>email</title>
+                        <path
+                            d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                    </svg>
+                    <p>something@notreal.com</p>
                 </div>
-            </div>
-        </section>
 
-        <section class="contactme-section">
-            <p class="contact-note">
-                Please get in touch if you think our work could be mutually beneficial!
-            </p>
+                <ul class="socials-icon">
 
-            <p class="address">
-                1234 Random Road Random Town, California 12345
-            </p>
+                    <li class="socials-icon-item">
+                        <a href="#"><img class="github-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                width="25" height="25" /></a>
+                    </li>
 
-            <div class="phone-number">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-                    <title>phone</title>
-                    <path
-                        d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-                </svg>
-                <p>555-555-5555</p>
-            </div>
+                    <li class="socials-icon-item">
+                        <a href="#"><img class="linkedin-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
+                                width="25" height="25" /></a>
 
-            <div class="email">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-                    <title>email</title>
-                    <path
-                        d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-                </svg>
-                <p>something@notreal.com</p>
-            </div>
+                    </li>
 
-            <ul class="socials-icon">
-
-                <li class="socials-icon-item">
-                    <img class="github-icon"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-                        width="30" height="30" />
-                </li>
-
-                <li class="socials-icon-item">
-                    <img class="linkedin-icon"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
-                        width="30" height="30" />
-
-                </li>
-
-                <li class="socials-icon-item">
-                    <img class="twitter-icon"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
-                        width="30" height="30" />
-                </li>
-            </ul>
-        </section>
-
-        <footer>
-            <p>&copy;2025 Carmen | All Rights Reserved</p>
-        </footer>
-    </main>
+                    <li class="socials-icon-item">
+                        <a href="#"><img class="twitter-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
+                                width="25" height="25" /></a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>

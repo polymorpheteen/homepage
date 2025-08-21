@@ -1,132 +1,191 @@
-/* Reset CSS */
+:root {
+    --header-font: "Open Sans", system-ui;
+    --main-font: "Amiko", sans-serif;
+    --background-color: #f9f5ea;
+    --font-color: #444444;
+    --header-1: 2.5rem;
+    --header-2: 1.75rem;
+    --header-3: 1.1rem;
+    --paragraph: 0.9rem;
+}
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
+    box-sizing: border-box;
     list-style: none;
 }
 
-blockquote,
-q {
-    quotes: none;
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0.5rem;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
+.wrapper {
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    grid-template-columns: minmax(auto, 175px) 4fr 1fr;
+    grid-template-rows: auto 2fr auto;
+    overflow: hidden;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+.wrapper>* {
+    min-width: 0;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.wrapper>aside {
+    grid-area: aside;
+}
+
+.wrapper>header {
+    grid-area: header;
+}
+
+.wrapper>main {
+    grid-area: main;
+    padding: 1rem;
+    border-left: none;
+}
+
+.wrapper>footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--header-font);
+    font-size: 700;
+}
+
+h1 {
+    font-size: var(--header-1);
+    padding: 1.25rem 0;
+    text-align: center;
+
+}
+
+h2 {
+    font-size: var(--header-2);
+    padding-bottom: 0.8rem;
+}
+
+h3 {
+    font-size: var(--header-3);
+}
+
+p {
+    font-family: var(--main-font);
+    font-size: var(--paragraph);
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+ul li {
+    padding: 0 0.3rem;
+    text-decoration: none;
+}
+
+section {
+    padding: 1rem 0;
+    border-top: 1px solid #949494;
+}
+
+.aboutme-section>p {
+    padding-bottom: 0.9rem;
+}
+
+.project-item {
+    padding: 0.9rem 0.5rem;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactme-section>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 0.8rem;
+}
+
+svg:hover,
+img:hover {
+    transition: all 200ms ease-in-out;
+    transform: scale(1.2);
+}
+
+image svg {
+    transition: all 200ms ease-in-out;
+}
+
+.email>p {
+    text-decoration: underline;
+}
+
+aside>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--header-font);
+    color: var(--font-color);
+    font-weight: 700;
+}
+
+a:link,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.25rem;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: var(--font-color);
+}
+
+@media (width < 800px) {
+    .wrapper {
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+
+    aside {
+        display: none;
+        visibility: hidden;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
