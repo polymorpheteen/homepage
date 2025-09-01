@@ -1,10 +1,10 @@
 :root {
-    --header-font: "Open Sans", system-ui;
-    --main-font: "Amiko", sans-serif;
-    --background-color: #f9f5ea;
+    --header-font: "Inter", sans-serif;
+    --main-font: "Roboto Mono", monospace;
+    --background-color: #FFFF;
     --font-color: #444444;
-    --header-1: 2.5rem;
-    --header-2: 1.75rem;
+    --header-1: 2rem;
+    --header-2: 1.5rem;
     --header-3: 1.1rem;
     --paragraph: 0.9rem;
 }
@@ -20,64 +20,33 @@ body {
     background-color: var(--background-color);
     color: var(--font-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    padding: 0.5rem;
+    padding: 20px;
 }
 
 .wrapper {
-    max-width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "aside main main"
-        "footer footer footer";
-    grid-template-columns: minmax(auto, 175px) 4fr 1fr;
-    grid-template-rows: auto 2fr auto;
+    max-width: 600px;
+    margin: auto;
+    flex-grow: 1;
     overflow: hidden;
-}
-
-.wrapper>* {
-    min-width: 0;
-    width: 100%;
-    overflow-wrap: break-word;
-}
-
-.wrapper>aside {
-    grid-area: aside;
-}
-
-.wrapper>header {
-    grid-area: header;
-}
-
-.wrapper>main {
-    grid-area: main;
-    padding: 1rem;
-    border-left: none;
-}
-
-.wrapper>footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 h1,
 h2,
 h3 {
     font-family: var(--header-font);
-    font-size: 700;
+    font-weight: 700;
 }
 
 h1 {
     font-size: var(--header-1);
     padding: 1.25rem 0;
     text-align: center;
-
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 h2 {
@@ -93,17 +62,9 @@ p {
     font-family: var(--main-font);
     font-size: var(--paragraph);
     font-weight: 400;
-    letter-spacing: -0.01rem;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
 }
 
 ul li {
-    padding: 0 0.3rem;
     text-decoration: none;
 }
 
@@ -114,6 +75,14 @@ section {
 
 .aboutme-section>p {
     padding-bottom: 0.9rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .project-item {
@@ -146,10 +115,9 @@ image svg {
     text-decoration: underline;
 }
 
-aside>ul {
+nav>ul {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-evenly;
     font-family: var(--header-font);
     color: var(--font-color);
     font-weight: 700;
@@ -160,12 +128,33 @@ a:hover,
 a:active {
     text-decoration: none;
     color: var(--font-color);
-    font-size: 1.25rem;
 }
 
 a:visited {
     text-decoration: underline;
     color: var(--font-color);
+}
+
+footer {
+    width: 100%;
+    font-family: var(--header-font);
+    font-weight: 700;
+    color: var(--font-color);
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--font-color);
+}
+
+footer>ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.mini-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 @media (width < 800px) {
@@ -176,11 +165,6 @@ a:visited {
             "footer footer";
         grid-template-columns: 1fr 1fr;
         padding: 0;
-    }
-
-    aside {
-        display: none;
-        visibility: hidden;
     }
 
     main {
