@@ -4,10 +4,16 @@
     --background-color: #FFFF;
     --accent-color: #5298e8;
     --text-color: #444444;
-    --header-1: 2.7rem;
-    --header-2: 1.7rem;
-    --header-3: 1.3rem;
-    --paragraph: 0.95rem;
+    --header-1: 2.5rem;
+    --header-2: 1.5rem;
+    --header-3: 1.2rem;
+    --paragraph: 0.87rem;
+}
+
+.dark-mode {
+    --background-color: #1a1a1a;
+    --accent-color: #eeb647;
+    --text-color: #FFFF;
 }
 
 * {
@@ -26,6 +32,37 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 0 20px 20px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    min-width: 60px;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+#darkModeToggle .icon {
+    transition: fill 0.3s ease;
 }
 
 .wrapper {
@@ -66,10 +103,6 @@ p {
     font-weight: 400;
 }
 
-ul li {
-    text-decoration: none;
-}
-
 section {
     padding: 1rem 0;
     border-top: 1px solid var(--accent-color);
@@ -79,34 +112,31 @@ section {
     padding-bottom: 0.9rem;
 }
 
+.mywork-section>h2 {
+    margin-bottom: 0.5rem;
+}
+
 .project {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .project-item {
-    padding: 0.5rem;
+    padding: 1.3rem;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .project-title {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.3rem;
 }
 
 .project-description {
     padding-top: 0.5rem;
-}
-
-svg:hover,
-img:hover {
-    transition: all 200ms ease-in-out;
-    transform: scale(1.2);
-}
-
-image svg {
-    transition: all 200ms ease-in-out;
 }
 
 nav {
@@ -116,6 +146,9 @@ nav {
     border-radius: 0 0 10px 10px;
 }
 
+a {
+    color: var(--font-color);
+}
 
 a:hover {
     text-decoration: none;
@@ -151,17 +184,12 @@ footer>ul {
     gap: 80px;
 }
 
-.footer-links a {
-    color: var(--font-color);
-}
-
-.mini-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
 @media (width < 800px) {
+
+    .toggle-container {
+        display: none;
+    }
+
     .wrapper {
         grid-template-areas:
             "header header"
